@@ -11,6 +11,16 @@ class stack:
     def push(self,new_node):
         new_node.next=self.top
         self.top=new_node
+    def pop(self):
+        if self.isempty():
+            print("Stack Empty")
+        else:
+            temp=self.top
+            print("Poped Element: ",temp.data)
+            self.top=self.top.next
+            temp=None
+
+       
     def print(self):
         temp=self.top
         while temp:
@@ -23,4 +33,6 @@ st.push(Node(20))
 st.push(Node(30))
 st.push(Node(40))
 st.push(Node(50))
+st.print()
+st.pop()
 st.print()
