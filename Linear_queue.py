@@ -41,6 +41,11 @@ lq.enqueue(Node(51))
 lq.enqueue(Node(60))
 lq.print()
 lq.dequeue()
+lq.dequeue()
+lq.dequeue()
+lq.print()
+lq.enqueue(Node(69))
+lq.enqueue(Node(87))
 lq.print()
 
 
