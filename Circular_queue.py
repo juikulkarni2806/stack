@@ -17,12 +17,17 @@ class CQueue:
     def dequeue(self):
         if self.front:
             temp=self.front
-            self.front=self.front.next
-            if self.front==None:
-                self.rear==None
+            
+            if self.front==self.rear:
+                self.front=self.rear==None
                 print("Now Queue is Empty")
-            self.rear.next=self.front
+                
+            
 
+            
+            else:
+                self.front=self.front.next
+                self.rear.next=self.front
             temp=None
         else:
             print("Queue is Empty")
@@ -46,9 +51,13 @@ lq.enqueue(Node(51))
 lq.enqueue(Node(60))
 lq.print()
 lq.dequeue()
-lq.dequeue()
+lq.print()
 lq.dequeue()
 lq.print()
-lq.enqueue(Node(69))
-lq.enqueue(Node(87))
+lq.dequeue()
 lq.print()
+lq.dequeue()
+lq.print()
+lq.dequeue()
+lq.print()
+
